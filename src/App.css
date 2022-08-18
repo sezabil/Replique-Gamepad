@@ -57,7 +57,7 @@ h4 {
   z-index: 2;
 
   transition: all 200ms ease-in;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .collLog {
   display: flex;
@@ -70,4 +70,11 @@ h4 {
   color: white;
   border-radius: 5px;
   text-align: center;
+}
+footer {
+  height: 5rem;
+  background-color: #151515;
+}
+.contPag {
+  background-color: aqua;
 }

@@ -4,19 +4,18 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    position: "fixed",
     botom: 0,
     zIndex: 200,
-    backgroundColor: "yellow",
+    backgroundColor: "orangered",
     padding: "10px 80px",
     color: "white",
-    width: "100%",
+    // width: "100%",
   },
   container: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    color: "white",
+    color: "blue",
   },
 }));
 
@@ -28,7 +27,7 @@ const AppPagination = ({ setPage, page = 10 }) => {
     window.scroll(0, 0);
   };
   return (
-    <div className={classes.container}>
+    <div className={classes.contPag}>
       <div className={classes.root}>
         <Pagination
           onChange={(e) => handleChange(e.target.textContent)}
@@ -37,7 +36,8 @@ const AppPagination = ({ setPage, page = 10 }) => {
             justifyContent: "center",
           }}
           variant="outlined"
-          count={99}
+          count={999}
+          color="gray"
         />
       </div>
     </div>
