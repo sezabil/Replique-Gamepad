@@ -4,18 +4,16 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    botom: 0,
-    zIndex: 200,
+    color: "white",
+
     backgroundColor: "orangered",
     padding: "10px 80px",
-    color: "white",
-    // width: "100%",
   },
   container: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    color: "blue",
+    backgroundColor: "orangered",
   },
 }));
 
@@ -37,7 +35,6 @@ const AppPagination = ({ setPage, page = 10 }) => {
           }}
           variant="outlined"
           count={999}
-          color="gray"
         />
       </div>
     </div>

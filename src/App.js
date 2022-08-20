@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Search from "./components/Search";
 
 import AppPagination from "./components/AppPagination";
 
@@ -27,7 +28,9 @@ function App() {
       <div className="App">
         <Header />
         <h1>Gamepad</h1>
-        <div className="container">
+        <Search />
+
+        {/* <div className="container">
           {games.results.map((element) => {
             return (
               <div className="mainBlock">
@@ -38,7 +41,8 @@ function App() {
               </div>
             );
           })}
-        </div>
+        </div> */}
+
         <footer>
           <AppPagination setPage={setPage} page={page} />
         </footer>
