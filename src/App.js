@@ -30,7 +30,7 @@ function App() {
         <h1>Gamepad</h1>
         <Search />
 
-        {/* <div className="container">
+        <div className="container">
           {games.results.map((element) => {
             return (
               <div className="mainBlock">
@@ -41,7 +41,7 @@ function App() {
               </div>
             );
           })}
-        </div> */}
+        </div>
 
         <footer>
           <AppPagination setPage={setPage} page={page} />

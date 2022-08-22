@@ -16,7 +16,7 @@ function Search() {
   //   let value=e.target.value;
   //   setSearchGames(value)
   // };
-
+  console.log(games.results);
   return (
     <>
       <div className="searchBar">
@@ -28,7 +28,7 @@ function Search() {
           // onChange={handleSearchGame}
         />
       </div>
-      <div className="container">
+      {/* <div className="container">
         {games.results.map((element) => {
           return (
             <div className="mainBlock">
@@ -39,7 +39,7 @@ function Search() {
             </div>
           );
         })}
-      </div>
+      </div> */}
       {/* <div className="container">
         {games.results.filter((val)=>{
           val.name.toLowerCase().includes(searchGames)
