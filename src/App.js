@@ -1,53 +1,28 @@
 import "./App.css";
 import Header from "./components/Header";
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import Search from "./components/Search";
-
-import AppPagination from "./components/AppPagination";
+import React, { useState } from "react";
+import Footer from "./components/Footer";
+import Home from "./page/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [games, setGames] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
 
-  useEffect(() => {
-    const fetchGames = async () => {
-      const result = await axios(
-        `https://api.rawg.io/api/games?key=d5024b21e1124d4abd459c0bacc15eab&page=${page}`
-      );
-      setGames(result.data);
-
-      setLoading(false);
-    };
-    fetchGames();
-  }, [page]);
-
   return (
-    games.length !== 0 && (
+    <section>
       <div className="App">
-        <Header />
-        <h1>Gamepad</h1>
-        <Search />
+        <Router>
+          <Header />
+          <Home page={page} />
+          <Routes>
+            <Route path="/page" element={<Home />} />
 
-        <div className="container">
-          {games.results.map((element) => {
-            return (
-              <div className="mainBlock">
-                <div className="blockImage">
-                  <img src={element.background_image} alt="" />
-                </div>
-                <h2>{element.name}</h2>
-              </div>
-            );
-          })}
-        </div>
-
-        <footer>
-          <AppPagination setPage={setPage} page={page} />
-        </footer>
+            {/* <Route path=“/Plateform” element={<Plateform />} /> */}
+          </Routes>
+          <Footer setPage={setPage} />
+        </Router>
       </div>
-    )
+    </section>
   );
 }
 

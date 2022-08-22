@@ -34,7 +34,7 @@ const AppPagination = ({ setPage, page = 10 }) => {
             justifyContent: "center",
           }}
           variant="outlined"
-          count={999}
+          count={99}
         />
       </div>
     </div>
