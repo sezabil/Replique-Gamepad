@@ -1,11 +1,10 @@
 import React from "react";
-import { useState } from "react";
 
-function Search() {
-  const [searchGames, setSearchGames] = useState("");
+function Search({ setSearchGames }) {
   const handleSearchGame = (e) => {
     let value = e.target.value;
     setSearchGames(value);
+    console.log(value);
   };
 
   return (

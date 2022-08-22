@@ -13,9 +13,9 @@ function App() {
       <div className="App">
         <Router>
           <Header />
-          <Home page={page} />
+
           <Routes>
-            <Route path="/page" element={<Home />} />
+            <Route path="/" element={<Home page={page} />} />
 
             {/* <Route path=“/Plateform” element={<Plateform />} /> */}
           </Routes>
